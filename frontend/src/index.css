@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+::selection {
+  background: #5b7cff;
+  color: white;
+}
