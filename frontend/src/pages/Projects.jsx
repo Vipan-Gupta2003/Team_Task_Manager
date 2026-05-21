@@ -33,7 +33,7 @@ const Projects = () => {
       <div className="grid gap-6 xl:grid-cols-[1fr_0.9fr]">
         <div className="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-card">
           <h3 className="text-lg font-semibold text-white">New project</h3>
-          <p className="mt-2 text-sm text-slate-400">Admins can create projects and invite team members.</p>
+          <p className="mt-2 text-sm text-slate-400">Create new projects and invite team members to collaborate.</p>
           <form onSubmit={handleSubmit} className="mt-6 space-y-4">
             {message && <div className="rounded-3xl bg-slate-950/90 px-4 py-3 text-sm text-slate-200">{message}</div>}
             <input
