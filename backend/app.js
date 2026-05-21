@@ -19,11 +19,10 @@ const apiLimiter = rateLimit({
 // Security middleware
 app.use(helmet());
 
-// CORS configuration - allow localhost on any port in development
-const corsOrigin = process.env.NODE_ENV === 'production' 
-  ? process.env.CLIENT_URL 
+// CORS configuration - prefer CLIENT_URL in production, but still allow localhost during rollout
+const corsOrigin = process.env.CLIENT_URL
+  ? process.env.CLIENT_URL
   : (origin, callback) => {
-      // Allow localhost on any port in development
       if (!origin || origin.includes('localhost') || origin.includes('127.0.0.1')) {
         callback(null, true);
       } else {
